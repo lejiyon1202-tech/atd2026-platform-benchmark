@@ -321,6 +321,19 @@ h2.pane-title { font-size: clamp(22px, 3vw, 32px); font-weight:800; color:#1E293
 /* ── PLATFORM IMAGE ─────────────────────── */
 .platform-img { width:100%; max-height:220px; object-fit:contain; border-radius:var(--radius); background:var(--dark-3); padding:16px; margin-bottom:24px; }
 
+/* ── BROWSER MOCK ────────────────────────── */
+.browser-mock { border-radius: var(--radius); overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,.1), 0 2px 8px rgba(0,0,0,.05); margin-bottom: 28px; border: 1px solid var(--border); background: var(--dark-2); }
+.browser-bar { background: var(--dark-3); padding: 10px 16px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border); }
+.browser-dots { display: flex; gap: 6px; flex-shrink: 0; }
+.browser-dot { width: 10px; height: 10px; border-radius: 50%; }
+.browser-dot-r { background: #FF6057; }
+.browser-dot-y { background: #FFBD2E; }
+.browser-dot-g { background: #27C93F; }
+.browser-url-bar { flex: 1; background: var(--dark); border-radius: 20px; padding: 4px 14px; font-size: 12px; color: var(--muted); border: 1px solid var(--border); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-family: 'Syne', monospace; }
+.browser-mock img { width: 100%; max-height: 300px; object-fit: cover; display: block; }
+.browser-mock-placeholder { height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: var(--muted); font-size: 13px; background: var(--dark-2); }
+.browser-mock-placeholder .ph-icon { font-size: 32px; opacity: .45; margin-bottom: 4px; }
+
 /* ── STATS ──────────────────────────────── */
 .stats-row { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:32px; }
 .stat-card { background:var(--dark-2); border:1px solid var(--border); border-radius:var(--radius); padding:20px 24px; }
@@ -504,12 +517,21 @@ footer p { font-size:13px; color:var(--muted); }
     <h2 class="pane-title">AI 4에이전트 + 접목 시나리오</h2>
     <p class="pane-desc">Whatfix는 소프트웨어를 사용하는 그 순간, 화면 위에 안내를 띄운다. 강의실 교육이나 매뉴얼 없이 "지금 이 버튼을 클릭하세요" 형태로 즉시 도움을 준다.</p>
 
-    <img
-      src="https://website.whatfix.com/wp-content/uploads/2026/02/Group-1272631029.png"
-      alt="Whatfix 가이던스 인터페이스"
-      class="platform-img"
-      onerror="this.style.display='none'"
-    >
+    <div class="browser-mock">
+      <div class="browser-bar">
+        <div class="browser-dots">
+          <div class="browser-dot browser-dot-r"></div>
+          <div class="browser-dot browser-dot-y"></div>
+          <div class="browser-dot browser-dot-g"></div>
+        </div>
+        <div class="browser-url-bar">whatfix.com — 실시간 디지털 가이던스</div>
+      </div>
+      <img
+        src="https://website.whatfix.com/wp-content/uploads/2026/02/Group-1272631029.png"
+        alt="Whatfix 가이던스 인터페이스"
+        onerror="this.parentElement.innerHTML='<div class=\'browser-mock-placeholder\'><div class=\'ph-icon\'>🖥️</div><span>Whatfix UI 화면</span></div>'"
+      >
+    </div>
 
     <!-- 고객 성과 -->
     <div class="stats-row" style="margin-bottom:20px;">
@@ -906,13 +928,21 @@ iframe, Shadow DOM 내 중첩 요소도 다층 알고리즘으로 추적</div>
       </div>
     </div>
 
-    <img
-      src="https://website.whatfix.com/wp-content/uploads/2026/03/pricing-ai-agents-img.webp"
-      alt="Whatfix AI Agents"
-      class="platform-img"
-      style="margin-top:8px;"
-      onerror="this.style.display='none'"
-    >
+    <div class="browser-mock" style="margin-top:16px;">
+      <div class="browser-bar">
+        <div class="browser-dots">
+          <div class="browser-dot browser-dot-r"></div>
+          <div class="browser-dot browser-dot-y"></div>
+          <div class="browser-dot browser-dot-g"></div>
+        </div>
+        <div class="browser-url-bar">whatfix.com/ai-agents</div>
+      </div>
+      <img
+        src="https://website.whatfix.com/wp-content/uploads/2026/03/pricing-ai-agents-img.webp"
+        alt="Whatfix AI Agents"
+        onerror="this.parentElement.innerHTML='<div class=\'browser-mock-placeholder\'><div class=\'ph-icon\'>🤖</div><span>Whatfix AI Agents 화면</span></div>'"
+      >
+    </div>
 
   </div>
 </div>
@@ -926,12 +956,21 @@ iframe, Shadow DOM 내 중첩 요소도 다층 알고리즘으로 추적</div>
     <h2 class="pane-title">AI 4엔진 + 접목 시나리오</h2>
     <p class="pane-desc">MetaLark.AI는 기업이 20년간 쌓아온 교육 콘텐츠를 AI로 읽고, 분류하고, 어디에 구멍이 있는지 찾아준다. 새로 만드는 것보다 이미 있는 것의 가치를 꺼내는 데 집중한다.</p>
 
-    <img
-      src="https://metalark.ai/wp-content/uploads/2025/10/MetaLark-AI-Services-Layer.png"
-      alt="MetaLark AI 4엔진 아키텍처"
-      class="platform-img"
-      onerror="this.style.display='none'"
-    >
+    <div class="browser-mock">
+      <div class="browser-bar">
+        <div class="browser-dots">
+          <div class="browser-dot browser-dot-r"></div>
+          <div class="browser-dot browser-dot-y"></div>
+          <div class="browser-dot browser-dot-g"></div>
+        </div>
+        <div class="browser-url-bar">metalark.ai — AI 4엔진 아키텍처</div>
+      </div>
+      <img
+        src="https://metalark.ai/wp-content/uploads/2025/10/MetaLark-AI-Services-Layer.png"
+        alt="MetaLark AI 4엔진 아키텍처"
+        onerror="this.parentElement.innerHTML='<div class=\'browser-mock-placeholder\'><div class=\'ph-icon\'>🧠</div><span>MetaLark AI 4엔진 아키텍처</span></div>'"
+      >
+    </div>
 
     <!-- $9B Content Chaos 맥락 (PPTX slide23) -->
     <div class="card" style="border-color:var(--ml-border);background:var(--ml-light);margin-bottom:24px;">
@@ -1230,6 +1269,22 @@ iframe, Shadow DOM 내 중첩 요소도 다층 알고리즘으로 추적</div>
     <span class="section-label label-sw">Skillwell</span>
     <h2 class="pane-title">AI 시뮬레이션 + 적응형 학습의 통합</h2>
     <p class="pane-desc">ETU(시뮬레이션)와 Realizeit(적응형 학습)의 합병으로 탄생한 신플랫폼. 교육 제작은 AI가, 역량 검증은 데이터가. <em style="color:var(--muted);">— ATD 2026 Debriefing 세션</em></p>
+
+    <div class="browser-mock" id="sw-img-container">
+      <div class="browser-bar">
+        <div class="browser-dots">
+          <div class="browser-dot browser-dot-r"></div>
+          <div class="browser-dot browser-dot-y"></div>
+          <div class="browser-dot browser-dot-g"></div>
+        </div>
+        <div class="browser-url-bar" id="sw-url-bar">skillwell.com</div>
+      </div>
+      <img id="sw-main-img" src="" alt="Skillwell 플랫폼 화면" style="display:none;" onerror="this.style.display='none';document.getElementById('sw-placeholder').style.display='flex';">
+      <div class="browser-mock-placeholder" id="sw-placeholder">
+        <div class="ph-icon">🖥️</div>
+        <span>이미지 수집 중…</span>
+      </div>
+    </div>
 
     <!-- 탄생 배경 -->
     <div class="quote-box quote-sw" style="margin-bottom:32px;">
