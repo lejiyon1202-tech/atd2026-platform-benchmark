@@ -67,17 +67,17 @@ h1, h2, h3, h4 { font-family: 'Syne', 'Noto Sans KR', sans-serif; line-height: 1
 }
 .cover::after { content:''; position:absolute; bottom:0;left:0;right:0; height:1px; background:linear-gradient(90deg,transparent,rgba(99,102,241,.6) 30%,rgba(16,185,129,.5) 70%,transparent); }
 .cover-inner { max-width:1060px; margin:0 auto; padding:0 40px; }
-.cover-badge { display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid rgba(0,0,0,.13);border-radius:20px;font-size:12px;color:rgba(255,255,255,.65);font-family:'Syne',sans-serif;letter-spacing:.04em;margin-bottom:22px; }
+.cover-badge { display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid rgba(0,0,0,.13);border-radius:20px;font-size:12px;color:rgba(15,23,42,.55);font-family:'Syne',sans-serif;letter-spacing:.04em;margin-bottom:22px; }
 .dot { width:7px;height:7px;border-radius:50%;background:#34D399;animation:pulse 2s infinite; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.85)} }
 .cover h1 { font-size: clamp(28px, 4.5vw, 48px); font-weight:800; color:#1E293B; letter-spacing:-.02em; margin-bottom:12px; }
 .cover-sub { font-size:18px; color: rgba(15,23,42,.6); font-weight:300; margin-bottom:28px; }
 .cover-tags { display:flex; flex-wrap:wrap; gap:10px; }
 .tag { padding:5px 14px; border-radius:20px; font-size:12px; font-weight:500; letter-spacing:.03em; }
-.tag-wx { background:var(--wx-light); color:#A5B4FC; border:1px solid var(--wx-border); }
-.tag-ml { background:var(--ml-light); color:#6EE7B7; border:1px solid var(--ml-border); }
-.tag-sw { background:var(--sw-light); color:#67E8F9; border:1px solid var(--sw-border); }
-.tag-sl { background:var(--sl-light); color:#C7D2FE; border:1px solid var(--sl-border); }
+.tag-wx { background:var(--wx-light); color:#4338CA; border:1px solid var(--wx-border); }
+.tag-ml { background:var(--ml-light); color:#059669; border:1px solid var(--ml-border); }
+.tag-sw { background:var(--sw-light); color:#0891B2; border:1px solid var(--sw-border); }
+.tag-sl { background:var(--sl-light); color:#4338CA; border:1px solid var(--sl-border); }
 
 /* ── TAB NAV ─────────────────────────────── */
 .tab-nav {
@@ -100,11 +100,11 @@ h1, h2, h3, h4 { font-family: 'Syne', 'Noto Sans KR', sans-serif; line-height: 1
   letter-spacing: .02em;
 }
 .tab-btn:hover { color: rgba(15,23,42,.7); }
-.tab-btn[data-tab="overview"].active   { color:#A5B4FC; border-bottom-color: var(--sl); }
-.tab-btn[data-tab="whatfix"].active    { color:#A5B4FC; border-bottom-color: var(--wx); }
-.tab-btn[data-tab="metalark"].active   { color:#6EE7B7; border-bottom-color: var(--ml); }
-.tab-btn[data-tab="skillwell"].active  { color:#67E8F9; border-bottom-color: var(--sw); }
-.tab-btn[data-tab="insight"].active    { color:#FCD34D; border-bottom-color: var(--am); }
+.tab-btn[data-tab="overview"].active   { color:#4338CA; border-bottom-color: var(--sl); }
+.tab-btn[data-tab="whatfix"].active    { color:#4338CA; border-bottom-color: var(--wx); }
+.tab-btn[data-tab="metalark"].active   { color:#059669; border-bottom-color: var(--ml); }
+.tab-btn[data-tab="skillwell"].active  { color:#0891B2; border-bottom-color: var(--sw); }
+.tab-btn[data-tab="insight"].active    { color:#D97706; border-bottom-color: var(--am); }
 
 /* ── TAB PANES ───────────────────────────── */
 .tab-pane { display:none; }
@@ -117,11 +117,11 @@ h1, h2, h3, h4 { font-family: 'Syne', 'Noto Sans KR', sans-serif; line-height: 1
   font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
   padding: 4px 12px; border-radius: 4px; margin-bottom: 12px;
 }
-.label-sl { background:var(--sl-light); color:#A5B4FC; }
-.label-wx { background:var(--wx-light); color:#A5B4FC; }
-.label-ml { background:var(--ml-light); color:#6EE7B7; }
-.label-sw { background:var(--sw-light); color:#67E8F9; }
-.label-am { background:var(--am-light); color:#FCD34D; }
+.label-sl { background:var(--sl-light); color:#4338CA; }
+.label-wx { background:var(--wx-light); color:#4338CA; }
+.label-ml { background:var(--ml-light); color:#059669; }
+.label-sw { background:var(--sw-light); color:#0891B2; }
+.label-am { background:var(--am-light); color:#D97706; }
 
 h2.pane-title { font-size: clamp(22px, 3vw, 32px); font-weight:800; color:#1E293B; margin-bottom:6px; }
 .pane-desc { font-size:16px; color:var(--muted); margin-bottom:40px; max-width:640px; line-height:1.7; }
@@ -173,9 +173,9 @@ h2.pane-title { font-size: clamp(22px, 3vw, 32px); font-weight:800; color:#1E293
 .col-effect{ width: 32%; }
 
 /* effect badge */
-.effect-text { color:#A5B4FC; }
-.effect-text-ml { color:#6EE7B7; }
-.effect-text-sw { color:#67E8F9; }
+.effect-text { color:#4338CA; font-weight:600; }
+.effect-text-ml { color:#059669; font-weight:600; }
+.effect-text-sw { color:#0891B2; font-weight:600; }
 
 /* ── QUOTE BOX ──────────────────────────── */
 .quote-box {
@@ -239,9 +239,9 @@ h2.pane-title { font-size: clamp(22px, 3vw, 32px); font-weight:800; color:#1E293
   border-bottom: 1px solid var(--border);
 }
 .compare-table .th-label { background:var(--dark-3); color:var(--muted); width:18%; }
-.compare-table .th-wx { background: rgba(99,102,241,.1); color:#A5B4FC; }
-.compare-table .th-ml { background: rgba(16,185,129,.1); color:#6EE7B7; }
-.compare-table .th-sw { background: rgba(6,182,212,.1); color:#67E8F9; }
+.compare-table .th-wx { background: rgba(99,102,241,.1); color:#4338CA; }
+.compare-table .th-ml { background: rgba(16,185,129,.1); color:#059669; }
+.compare-table .th-sw { background: rgba(6,182,212,.1); color:#0891B2; }
 .compare-table td {
   padding: 14px 20px;
   border-bottom: 1px solid rgba(0,0,0,.07);
@@ -276,17 +276,17 @@ h2.pane-title { font-size: clamp(22px, 3vw, 32px); font-weight:800; color:#1E293
 .idea-list { list-style:none; display:flex; flex-direction:column; gap:10px; }
 .idea-list li { display:flex; gap:12px; align-items:flex-start; font-size:14px; color:rgba(15,23,42,.8); line-height:1.65; }
 .idea-num { width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; flex-shrink:0; margin-top:1px; }
-.num-wx { background:var(--wx-light); color:#A5B4FC; border:1px solid var(--wx-border); }
-.num-ml { background:var(--ml-light); color:#6EE7B7; border:1px solid var(--ml-border); }
-.num-sw { background:var(--sw-light); color:#67E8F9; border:1px solid var(--sw-border); }
-.num-am { background:var(--am-light); color:#FCD34D; border:1px solid var(--am-border); }
+.num-wx { background:var(--wx-light); color:#4338CA; border:1px solid var(--wx-border); }
+.num-ml { background:var(--ml-light); color:#059669; border:1px solid var(--ml-border); }
+.num-sw { background:var(--sw-light); color:#0891B2; border:1px solid var(--sw-border); }
+.num-am { background:var(--am-light); color:#D97706; border:1px solid var(--am-border); }
 
 /* ── AI BOUNDARY TABLE ─────────────────── */
 .boundary-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:8px; }
 .boundary-col { border:1px solid var(--border); border-radius:var(--radius-sm); overflow:hidden; }
 .boundary-col-header { padding:12px 16px; font-weight:700; font-size:13px; letter-spacing:.04em; }
-.header-ai { background:var(--wx-light); color:#A5B4FC; }
-.header-human { background:var(--sl-light); color:#C7D2FE; }
+.header-ai { background:var(--wx-light); color:#4338CA; }
+.header-human { background:var(--sl-light); color:#4338CA; }
 .boundary-items { padding:8px 0; }
 .boundary-item { display:flex; align-items:flex-start; gap:10px; padding:8px 16px; font-size:14px; color:rgba(15,23,42,.8); }
 .boundary-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; margin-top:7px; }
@@ -304,16 +304,16 @@ h2.pane-title { font-size: clamp(22px, 3vw, 32px); font-weight:800; color:#1E293
   white-space: pre-line;
   margin-top:12px;
 }
-.flow-highlight { color: #6EE7B7; }
-.flow-highlight-wx { color: #A5B4FC; }
+.flow-highlight { color: #059669; font-weight:600; }
+.flow-highlight-wx { color: #4338CA; font-weight:600; }
 
 /* ── ACTION TABLE ───────────────────────── */
 .action-table { width:100%; border-collapse:collapse; font-size:14px; }
 .action-table th { background:var(--dark-3); color:var(--muted); font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:10px 16px; text-align:left; border-bottom:1px solid var(--border); }
 .action-table td { padding:14px 16px; border-bottom:1px solid rgba(0,0,0,.05); color:rgba(15,23,42,.85); vertical-align:top; line-height:1.65; }
 .action-table tr:last-child td { border-bottom:none; }
-.diff-easy { color:#34D399; font-size:16px; }
-.diff-mid  { color:#FBBF24; font-size:16px; }
+.diff-easy { color:#059669; font-size:16px; font-weight:600; }
+.diff-mid  { color:#D97706; font-size:16px; font-weight:600; }
 
 /* ── SECTION DIVIDER ────────────────────── */
 .divider { border:none; border-top:1px solid var(--border); margin:40px 0; }
@@ -330,7 +330,7 @@ h2.pane-title { font-size: clamp(22px, 3vw, 32px); font-weight:800; color:#1E293
 .browser-dot-y { background: #FFBD2E; }
 .browser-dot-g { background: #27C93F; }
 .browser-url-bar { flex: 1; background: var(--dark); border-radius: 20px; padding: 4px 14px; font-size: 12px; color: var(--muted); border: 1px solid var(--border); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-family: 'Syne', monospace; }
-.browser-mock img { width: 100%; max-height: 300px; object-fit: cover; display: block; }
+.browser-mock img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: contain; background: var(--dark-3); }
 .browser-mock-placeholder { height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: var(--muted); font-size: 13px; background: var(--dark-2); }
 .browser-mock-placeholder .ph-icon { font-size: 32px; opacity: .45; margin-bottom: 4px; }
 
@@ -588,19 +588,19 @@ footer p { font-size:13px; color:var(--muted); }
           </thead>
           <tbody>
             <tr>
-              <td style="font-weight:700;color:#A5B4FC;">1</td>
+              <td style="font-weight:700;color:#4338CA;">1</td>
               <td style="font-weight:600;color:#1E293B;">Context<br><span style="font-size:12px;color:var(--muted);">맥락 인식</span></td>
               <td>현재 화면 상태, UI 요소 위치, 앱 화면 ID</td>
               <td>사용자가 어느 화면에서 무엇과 상호작용하는지 감지</td>
             </tr>
             <tr>
-              <td style="font-weight:700;color:#A5B4FC;">2</td>
+              <td style="font-weight:700;color:#4338CA;">2</td>
               <td style="font-weight:600;color:#1E293B;">Intent<br><span style="font-size:12px;color:var(--muted);">의도 추론</span></td>
               <td>클릭 패턴, 체류 시간, 커서 이동, 입력 여부</td>
               <td>막혀있는지 / 탐색 중인지 / 작업 완료 중인지 3가지로 분류</td>
             </tr>
             <tr>
-              <td style="font-weight:700;color:#A5B4FC;">3</td>
+              <td style="font-weight:700;color:#4338CA;">3</td>
               <td style="font-weight:600;color:#1E293B;">Action<br><span style="font-size:12px;color:var(--muted);">실시간 반응</span></td>
               <td>Context + Intent 결합 결과</td>
               <td>안내 팝업 / 도움말 / 자동화 / 외부 AI 중 적절한 것 즉시 트리거</td>
@@ -975,7 +975,7 @@ iframe, Shadow DOM 내 중첩 요소도 다층 알고리즘으로 추적</div>
     <!-- $9B Content Chaos 맥락 (PPTX slide23) -->
     <div class="card" style="border-color:var(--ml-border);background:var(--ml-light);margin-bottom:24px;">
       <div class="section-label label-ml" style="margin-bottom:10px;">문제 맥락 — $9B Content Chaos</div>
-      <p style="font-size:15px;color:rgba(15,23,42,.9);line-height:1.75;">기업들은 <strong style="color:#6EE7B7;">연간 $9B(약 12조 원)</strong>을 학습 콘텐츠 제작에 쓰지만, 대부분이 쌓아두고 쓰지 않는다. MetaLark.AI의 포지셔닝: <strong style="color:#6EE7B7;">"The Digital MRI for Your Learning Content"</strong> — 이미 가진 자산을 먼저 진단하라.</p>
+      <p style="font-size:15px;color:rgba(15,23,42,.9);line-height:1.75;">기업들은 <strong style="color:#059669;">연간 $9B(약 12조 원)</strong>을 학습 콘텐츠 제작에 쓰지만, 대부분이 쌓아두고 쓰지 않는다. MetaLark.AI의 포지셔닝: <strong style="color:#059669;">"The Digital MRI for Your Learning Content"</strong> — 이미 가진 자산을 먼저 진단하라.</p>
       <p style="font-size:13px;color:var(--muted);margin-top:8px;">출처: ATD 2026 AI Showcase 세션 발표 PPTX</p>
     </div>
 
@@ -1686,7 +1686,7 @@ iframe, Shadow DOM 내 중첩 요소도 다층 알고리즘으로 추적</div>
           </tr>
           <tr>
             <td class="td-label">우리와의 관련성</td>
-            <td class="td-sw" style="color:#67E8F9; font-weight:600;">AI 롤플레잉 자동 생성 + 역량 달성 검증</td>
+            <td class="td-sw" style="color:#0891B2; font-weight:600;">AI 롤플레잉 자동 생성 + 역량 달성 검증</td>
             <td>실시간 개입 방식 참조</td>
             <td>협업 학습 일부 참조</td>
           </tr>
@@ -1877,7 +1877,7 @@ iframe, Shadow DOM 내 중첩 요소도 다층 알고리즘으로 추적</div>
     </div>
 
     <!-- 시나리오 D — 3개 플랫폼 완전 통합 -->
-    <div class="card" style="margin-bottom:32px;border-color:rgba(255,255,255,.15);">
+    <div class="card" style="margin-bottom:32px;border-color:var(--border);">
       <div class="card-header">
         <div class="card-icon icon-sw">🚀</div>
         <div>
